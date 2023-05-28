@@ -1,0 +1,1 @@
+An overview of Model Predictive Control and the many variants of it as well as applications, and comparisons to other control schemes. These should all be split into separate files.
