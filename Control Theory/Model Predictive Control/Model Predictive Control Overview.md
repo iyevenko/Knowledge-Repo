@@ -1,48 +1,40 @@
 ---
-description: An overview of Model Predictive Control. Just the high level stuff.
+description: An introduction to the essential elements of model predictive control (MPC), including models and modeling, stability assumptions, terminal constraints, and a comparison to other control schemes.
 ---
-# Control Theory and Model Predictive Control Overview
+# Model Predictive Control (MPC)
 
-## Control Theory
+## Introduction
+This chapter provides an overview of the essential elements of model predictive control (MPC). It covers deterministic and stochastic models, regulation, state estimation, dynamic programming (DP), tracking, disturbances, and important performance properties such as closed-loop stability and zero offset to disturbances.
 
-Control theory is a branch of engineering and mathematics that deals with the analysis and design of systems that are subject to control. It involves the use of mathematical models to describe the behavior of a system, and the design of control algorithms to manipulate the system to achieve desired objectives.
+## Background
+Readers with background in MPC and linear systems theory may skim this chapter briefly and proceed to Chapter 2. Other introductory texts covering the basics of MPC include:
+- Maciejowski (2002)
+- Camacho and Bordons (2004)
+- Rossiter (2004)
+- Goodwin, Sern, and De Don (2005)
+- Kwon (2005)
+- Wang (2009)
 
-## Model Predictive Control (MPC) Overview
+## Models and Modeling
+MPC uses a dynamic model to forecast system behavior and optimize the forecast to produce the best decision - the control move at the current time. Models are central to every form of MPC. The state estimation problem is to evaluate the record of measurements to determine the most likely initial state of the system.
 
-Model predictive control (MPC) is an advanced method of process control that is used to control a process while satisfying a set of constraints. It has been in use in the process industries in chemical plants and oil refineries since the 1980s. In recent years, it has also been used in power system balancing models and in power electronics.
+## Applications and Comparisons
+MPC has its roots in optimal control and is used in a variety of applications. It is often compared to other control schemes to determine its effectiveness in different scenarios.
 
-### High-level overview of MPC
+## Overview
+MPC is a control scheme that uses a model of the system to predict future behavior and optimize control inputs over a finite time horizon. The optimization problem is solved at each time step, and the first control input is applied to the system. MPC has become increasingly popular in recent years due to its ability to handle constraints and nonlinearities.
 
-- MPC allows the current timeslot to be optimized, while keeping future timeslots in account. This is achieved by optimizing finite time-horizon, but only implementing the current timeslot and then optimizing again, repeatedly, thus differing from a linear-quadratic regulator (LQR).
-- MPC has the ability to anticipate future events and can take control actions accordingly. PID controllers do not have this predictive ability.
-- MPC relies on dynamic models of the process, most often linear empirical models obtained by system identification.
-- MPC is nearly universally implemented as a digital control, although there is research into achieving faster response times with specially designed analog circuitry.
-- Generalized predictive control (GPC) and dynamic matrix control (DMC) are classical examples of MPC.
-- The models used in MPC are generally intended to represent the behavior of complex and simple dynamical systems.
-- Common dynamic characteristics that are difficult for PID controllers include large time delays and high-order dynamics.
-- MPC models predict the change in the dependent variables of the modeled system that will be caused by changes in the independent variables.
-- Nonlinear MPC can be used when linear models are not sufficiently accurate to represent the real process nonlinearities.
-- The prediction horizon keeps being shifted forward and for this reason MPC is also called receding horizon control.
+## Examples of MPC
+There are many different forms of MPC that can be used for various applications. The most useful forms of MPC are presented here, which also display the roles of the three main assumptions used to guarantee closed-loop asymptotic stability. These assumptions are summarized in Table 2.1 for the time-invariant case, and Table 2.2 for the time-varying case.
 
-### Comparison to other control schemes
+### Stability Assumptions
+- Continuity of system and cost
+- Properties of constraint sets
+- Basic stability assumption
+- Uniform weak controllability
 
-Compared to other control schemes, MPC has the following advantages:
+## Terminal Constraint
+One question that is often asked is whether or not the terminal constraint is necessary. Since the conditions given previously are sufficient, necessity cannot be claimed. Further discussion on this topic is provided later in the book.
 
-- MPC allows for optimization of future time-horizons, while PID controllers only optimize the current time-step.
-- MPC has the ability to anticipate future events and can take control actions accordingly, while PID controllers do not have this predictive ability.
-- MPC relies on dynamic models of the process, while PID controllers do not require a model of the process.
-- MPC is nearly universally implemented as a digital control, while PID controllers can be implemented as either analog or digital controls.
-- Nonlinear MPC can be used when linear models are not sufficiently accurate to represent the real process nonlinearities, while PID controllers are generally limited to linear systems.
-
-### Applications of Model Predictive Control
-
-MPC has been used in various industries, including:
-
-- Chemical plants
-- Oil refineries
-- Power system balancing models
-- Power electronics.
-
-## Conclusion
-
-Model Predictive Control is a powerful control scheme that has found many applications in various fields, including process control, robotics, and autonomous vehicles. It allows for optimization of future time-horizons, can anticipate future events, and can handle constraints and uncertainties in the system. However, it can be computationally expensive and requires a good model of the system being controlled.
+## Comparison to Other Control Schemes
+MPC has several advantages over other control schemes, such as PID control and LQR. It can handle constraints and nonlinearities, and it can optimize control inputs over a finite time horizon. However, it can be computationally expensive and requires a good model of the system.
