@@ -1,5 +1,5 @@
 ---
-description: This note discusses the dynamic models used in Model Predictive Control (MPC) and the state estimation problem, including joint density, linear transformation, conditional density, and information increase.
+description: This note discusses the dynamic models used in Model Predictive Control (MPC) and the state estimation problem, as well as provides an overview of MPC and its implementation for target tracking problems using the Casadi framework and MATLAB simulation environment.
 ---
 # Model Predictive Control: Dynamic Models and State Estimation
 
@@ -50,5 +50,27 @@ The conditional density of x(0) given y(0) is normal. The optimal state estimate
 ### Information Increase
 The change in variance after measurement (Q(0) to P(0)) quantifies the information increase by obtaining measurement y(0). The variance after measurement, P(0), is always less than or equal to Q(0), which implies that we have gained information by obtaining the measurement.
 
+## Model Predictive Control - An Overview
+### What is Model Predictive Control?
+- Model Predictive Control (MPC) uses the system model to predict future states of the system.
+- It applies optimal inputs in a prediction horizon and compensates for unmeasured noise or disturbance in the system.
+- MPC is a control scheme used in various applications, including robotics, mobile robots, and aerial robotics.
+
+### Target Tracking Problem
+- The current repository implements MPC for target tracking problems.
+- The system is an unmanned aerial vehicle (UAV) following a mobile vehicle target.
+- The cost function to be minimized for predicted inputs is the distance between the UAV and the moving target.
+
+### Repository Information
+- Repository Name: devsonni/MPC-Implementation
+- Description: This repository has the code for the nonlinear model predictive controller for target tracking problems with the use of Casadi framework and Matlab simulation environment.
+- Languages Used: Python (56.8%), MATLAB (43.2%)
+
+### Repository Contents
+- "State predictive model of target" folder contains the target's model, which serves as a moving reference for the UAV and provides the cost value from the initial point of the UAV.
+- "NMPC_TT" contains the code for the nonlinear model predictive controller.
+
 ## Conclusion
 Understanding the dynamic models used in MPC and the state estimation problem is crucial for designing and implementing effective control schemes. Linear state space models are commonly used in MPC, and can be either time-varying or time-invariant. The optimal state estimate is obtained by maximizing the conditional density of x(0) given y(0), which is normal.
+
+MPC is a powerful control scheme used in various applications, including target tracking problems. The current repository provides an implementation of MPC for target tracking problems using the Casadi framework and MATLAB simulation environment.
