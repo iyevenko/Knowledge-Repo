@@ -1,10 +1,10 @@
 ---
-description: This note provides an introduction to Model Predictive Control (MPC), discussing its basics, variants, applications, and comparisons to other control schemes. It also explores the intersection of MPC and Reinforcement Learning (RL) and provides an example of NMPC-based UAV 3D target tracking in the presence of obstacles and visibility constraints.
+description: An overview of the essential elements of MPC, including models and modeling, stability assumptions, terminal constraints, and comparisons to other control schemes. It also includes examples of MPC, its applications, and scholarly articles related to it.
 ---
-# Model Predictive Control (MPC) - An Overview
+# Model Predictive Control (MPC) Review
 
 ## Introduction
-Model Predictive Control (MPC) is a popular control strategy used in various applications. It is a feedback control strategy that uses a model of the system to predict future behavior and optimize control inputs. In this note, we will discuss the basics of MPC, its variants, applications, and comparisons to other control schemes.
+Model Predictive Control (MPC) is an advanced control method that uses a process model to predict the future and make control decisions accordingly. This chapter provides an overview of the essential elements of MPC, including models and modeling, stability assumptions, terminal constraints, and comparisons to other control schemes.
 
 ## Background
 Readers with background in MPC and linear systems theory may skim this chapter briefly and proceed to Chapter 2. Other introductory texts covering the basics of MPC include:
@@ -18,21 +18,27 @@ Readers with background in MPC and linear systems theory may skim this chapter b
 ## Models and Modeling
 MPC uses a dynamic model to forecast system behavior and optimize the forecast to produce the best decision - the control move at the current time. Models are central to every form of MPC. The state estimation problem is to evaluate the record of measurements to determine the most likely initial state of the system.
 
-## Variants of MPC
-There are several variants of MPC, including:
-- Linear MPC
-- Nonlinear MPC
-- Robust MPC
-- Stochastic MPC
-- Distributed MPC
-
-## Applications of MPC
+## Applications
 MPC has been used in various applications, including:
 - Chemical processes
-- Automotive control
-- Robotics
-- Aerospace
 - Power systems
+- Robotics
+- Autonomous vehicles
+- Aerospace systems
+
+## Comparisons to Other Control Schemes
+MPC has several advantages over other control schemes, such as PID control and LQR. It can handle constraints and nonlinearities, and it can optimize control inputs over a finite time horizon. However, it can be computationally expensive and requires a good model of the system. MPC has been compared to other control schemes, such as adaptive control and fuzzy control.
+
+## Variants of MPC
+There are several variants of MPC, including:
+- Nonlinear MPC
+- Distributed MPC
+- Stochastic MPC
+- Robust MPC
+- Economic MPC
+
+## Overview
+MPC is a control scheme that uses a model of the system to predict future behavior and optimize control inputs over a finite time horizon. The optimization problem is solved at each time step, and the first control input is applied to the system. MPC has become increasingly popular in recent years due to its ability to handle constraints and nonlinearities.
 
 ## Examples of MPC
 There are many different forms of MPC that can be used for various applications. The most useful forms of MPC are presented here, which also display the roles of the three main assumptions used to guarantee closed-loop asymptotic stability. These assumptions are summarized in Table 2.1 for the time-invariant case, and Table 2.2 for the time-varying case.
@@ -46,25 +52,12 @@ There are many different forms of MPC that can be used for various applications.
 ## Terminal Constraint
 One question that is often asked is whether or not the terminal constraint is necessary. Since the conditions given previously are sufficient, necessity cannot be claimed. Further discussion on this topic is provided later in the book.
 
-## Comparison to Other Control Schemes
-MPC has several advantages over other control schemes, including:
-- Ability to handle constraints
-- Ability to handle nonlinear systems
-- Ability to handle disturbances
-- Ability to handle time-varying systems
-
-However, MPC also has some limitations, including:
-- High computational requirements
-- Sensitivity to model inaccuracies
-- Limited ability to handle large-scale systems
-
-MPC has been compared to other control schemes, such as PID control and LQR, to determine its effectiveness in different scenarios.
-
-## MPC and RL Intersection
-MPC and Reinforcement Learning (RL) are two popular control strategies that have been used in various applications. The intersection of these two strategies has been explored in recent years. 
-
-## NMPC-based UAV 3D Target Tracking In The Presence Of Obstacles and Visibility Constraints
-This code is the source code of the paper titled "NMPC-based UAV 3D Target Tracking In The Presence Of Obstacles and Visibility Constraints". The code is available on GitHub.
+## Scholarly Articles
+- "Model Predictive Control: Review of the Three Decades" by Mayne et al. (Cited by 678)
+- "Model Predictive Control: Recent Developments and Tutorial Overview" by Rawlings et al. (Cited by 1378)
+- "Review on Model Predictive Control: An Engineering Perspective" by Schwenzer (Cited by 126)
+- "Model Predictive Control Tuning Methods: A Review" by Garriga (Cited by 418)
+- "Review Model Predictive Controller for Stability and Plant Model" by MathWorks
 
 ## Conclusion
-MPC is a powerful control strategy that has been used in various applications. It has several advantages over other control schemes, but also has some limitations. Understanding the basics of MPC, its variants, applications, and comparisons to other control schemes is important for anyone interested in control theory.
+MPC is a powerful control method that has been widely used in various applications. It has been compared to other control schemes and has several variants that can be used depending on the application.
