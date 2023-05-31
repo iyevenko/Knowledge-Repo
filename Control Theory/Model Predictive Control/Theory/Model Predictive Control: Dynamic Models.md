@@ -1,5 +1,5 @@
 ---
-description: This note discusses the dynamic models used in Model Predictive Control (MPC) and the state estimation problem, as well as provides an overview of MPC and its implementation for target tracking problems using the Casadi framework and MATLAB simulation environment.
+description: This note discusses the dynamic models used in Model Predictive Control (MPC) and the state estimation problem, as well as the optimization problem setup and predictive model for MPC. It also provides an overview of MPC and its implementation for target tracking problems using the Casadi framework and MATLAB simulation environment. Finally, it covers the QP solution for the MPC optimization problem.
 ---
 # Model Predictive Control: Dynamic Models and State Estimation
 
@@ -74,3 +74,29 @@ The change in variance after measurement (Q(0) to P(0)) quantifies the informati
 Understanding the dynamic models used in MPC and the state estimation problem is crucial for designing and implementing effective control schemes. Linear state space models are commonly used in MPC, and can be either time-varying or time-invariant. The optimal state estimate is obtained by maximizing the conditional density of x(0) given y(0), which is normal.
 
 MPC is a powerful control scheme used in various applications, including target tracking problems. The current repository provides an implementation of MPC for target tracking problems using the Casadi framework and MATLAB simulation environment.
+
+# Lecture X: State-based control synthesis
+
+## MPC Optimization Problem Setup
+- MPC optimization problem: J= Y'Y+rU"D' DU -min
+- 1st difference matrix: 
+  ```
+  1 0
+  0 1
+  0 0
+  ```
+- Subject to: U  ug
+- This is a QP problem
+
+## Predictive Model
+- Y = Gx + HU + Fu
+
+## Solution
+- x(t) - MPC Problem, QP Solver| ->U -> u(t+1) = U(1)
+- Computation Timeline: E t to moon
+
+## MPC Optimization Problem Setup (continued)
+- J-1Y -10'0
+- Please o
+
+## QP solution

@@ -1,5 +1,5 @@
 ---
-description: An overview of the essential elements of MPC, including models and modeling, stability assumptions, terminal constraints, and comparisons to other control schemes. It also includes examples of MPC, its applications, and scholarly articles related to it.
+description: An overview of the essential elements of MPC, including models and modeling, stability assumptions, terminal constraints, and comparisons to other control schemes. It also includes examples of MPC, scholarly articles, basics of MPC, closed form solutions, hyperparameters, and references.
 ---
 # Model Predictive Control (MPC) Review
 
@@ -59,5 +59,19 @@ One question that is often asked is whether or not the terminal constraint is ne
 - "Model Predictive Control Tuning Methods: A Review" by Garriga (Cited by 418)
 - "Review Model Predictive Controller for Stability and Plant Model" by MathWorks
 
-## Conclusion
-MPC is a powerful control method that has been widely used in various applications. It has been compared to other control schemes and has several variants that can be used depending on the application.
+## Basics of MPC
+The basics of MPC involve creating a mathematical model of the system, defining a cost function, and optimizing control inputs over a time horizon. The cost function can be adjusted to prioritize different objectives, such as minimizing error or energy consumption. MPC requires solving an optimization problem at each time step, which can be computationally intensive.
+
+## Closed Form Solutions
+There are even ways to find closed form solutions to the MPC problem, which can save computational resources. This method involves computing the closed form solution offline and then evaluating the solution using equations on the target hardware.
+
+## Hyperparameters
+MPC has several hyperparameters that can be adjusted, such as the cost matrices and length of time horizon. Finding a good set of parameters requires trial and error based on how the system behaves on running on the controller.
+
+## References
+- https://www.itk.ntnu.no/fag/fordypning/TK16-filer/Samling1_MorariLee.pdf
+- https://engineering.utsa.edu/ataha/wp-content/uploads/sites/38/2017/10/MPC_Intro.pdf
+- https://www.uiam.sk/pc11/data/workshops/mpc/MPC_PC11_Lecture1.pdf
+- http://underactuated.mit.edu/lqr.html
+- https://www.ni.com/en-in/innovations/white-papers/06/pid-theory-explained.html
+- http://cse.lab.imtlucca.it/~bemporad/teaching/mpc/stuttgart_2012/5-hybrid_mpc.pdf
