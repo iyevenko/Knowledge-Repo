@@ -1,0 +1,1 @@
+Applications of model predictive control. Details model predictive controller design, including code implentation, system setup, simulation of the system, tradeoffs, practical considerations, etc.

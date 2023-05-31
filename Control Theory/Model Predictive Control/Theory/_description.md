@@ -1,0 +1,1 @@
+The math behind MPC. Anything technical relating to system setup, the opimization problem, math concepts, etc.
