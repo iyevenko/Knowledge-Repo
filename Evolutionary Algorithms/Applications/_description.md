@@ -1,0 +1,1 @@
+This folder can be used to store notes on the various applications of evolutionary algorithms in different fields such as engineering, finance, and healthcare.

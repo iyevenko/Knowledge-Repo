@@ -1,0 +1,1 @@
+Everything related to evolultionary algorithms an genetic algorithms, including motiviation, parallels to biological evolution, computational properties, implementation, variants, applications, etc.
