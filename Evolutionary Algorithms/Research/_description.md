@@ -1,0 +1,1 @@
+This folder can be used to store notes on the latest research and developments in the field of evolutionary algorithms.

@@ -1,0 +1,1 @@
+This folder can be used to store notes on different types of evolutionary algorithms such as genetic algorithms, particle swarm optimization, and ant colony optimization.
